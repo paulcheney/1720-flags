@@ -1,0 +1,238 @@
+/* -------------- COLOR SCHEME --------------- */
+:root {
+  --color-primary: #3a4ca7;
+  --color-secondary: #e7a931;
+
+  /* Add a grey scale Colors */
+  --color-mygrey-0: lab(100% 0 0);
+  --color-mygrey-5: lab(95% 0 0);
+  --color-mygrey-10: lab(90% 0 0);
+  --color-mygrey-20: lab(80% 0 0);
+  --color-mygrey-30: lab(70% 0 0);
+  --color-mygrey-40: lab(60% 0 0);
+  --color-mygrey-50: lab(50% 0 0);
+  --color-mygrey-60: lab(40% 0 0);
+  --color-mygrey-70: lab(30% 0 0);
+  --color-mygrey-80: lab(20% 0 0);
+  --color-mygrey-90: lab(10% 0 0);
+  --color-mygrey-100: lab(0% 0 0);
+}
+
+* {
+  font-family: "Montserrat", sans-serif;
+  box-sizing: border-box;
+}
+
+/************************** HEADER **************************/
+header {
+  padding: 10px 0 10px 10px;
+  display: grid;
+  grid-template-columns: 25px auto 36px;
+  column-gap: 8px;
+  align-items: end;
+  background-color: var(--color-mygrey-90);
+}
+
+header img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+header span {
+  font-size: 1.3rem;
+  font-weight: 300;
+  color: var(--color-secondary)
+}
+
+
+/************************** HAMBURGER NAVIGATION **************************/
+.hamburger {
+  background: none;
+  border: none;
+  color: var(--color-secondary);
+  cursor: pointer;
+  font-family: Verdana;
+  font-size: 2rem;
+}
+
+.hamburger::before {
+  content: "\2630";
+}
+
+.hamburger.show::before {
+  content: "\00D7";
+}
+
+
+/************************** NAVIGATION **************************/
+nav {
+  display: none;
+}
+
+nav ul {
+  background-color: var(--color-mygrey-5);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav a {
+  display: block;
+  font-size: .8rem;
+  font-weight: 700;
+  color: var(--color-mygrey-70);
+  text-decoration: none;
+  padding: 0.6rem 10px;
+  border-bottom: 1px solid var(--color-mygrey-10);
+}
+
+nav a:hover {
+  background-color: var(--color-mygrey-10);
+}
+
+nav li.active a {
+  color: var(--color-primary);
+}
+
+nav.show {
+  display: block;
+}
+
+
+
+
+
+/************************** MAIN AREA **************************/
+h1 {
+  color: var(--color-primary);
+  font-size: 1.5rem;
+  font-weight: 300;
+  margin: 0;
+  padding: 1rem 10px;
+}
+
+/************************** LIST / GRID BUTTONS **************************/
+.viewbuttons {
+padding: .5rem 0;
+display: flex;
+justify-content: center;
+gap: 10px
+
+}
+.viewbuttons button {
+  width: 88px;
+  height: 44px;
+  margin: 0;
+  padding: 11px;
+  background:none;
+  border: 1px solid var(--color-mygrey-20);
+  border-radius: 4px;
+}
+.viewbuttons img {
+  width: 22px;
+  height: 22px;
+}
+.viewbuttons .active {
+  background-color: var(--color-secondary);
+
+}
+
+
+
+/************************** FLAG AREA AS A LIST **************************/
+.list section {
+  margin: 1rem 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.list img {
+  width: 100px;
+  height: auto;
+}
+.list h2 {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--color-primary);
+}
+.list p {
+  font-size: .8rem;
+  font-weight: 200;
+  color: var(--color-mygrey-50);
+}
+
+/************************** FLAG AREA AS A GRID **************************/
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+  margin: 10px;
+  gap: 10px;
+}
+.grid section {
+  border: 1px solid var(--color-mygrey-10);
+  border-radius: 10px;
+  overflow: hidden;
+}
+.grid img {
+  width: 100%;
+  height: auto;
+}
+.grid h2 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-align: center;
+  color: var(--color-primary)
+}
+
+.grid p {
+  font-size: .9rem;
+  font-weight: 400;
+  text-align: center;
+  color: var(--color-mygrey-50)
+}
+
+
+
+
+/************************** SOCIAL MEDIA **************************/
+.social {
+  display: flex;
+  justify-content: center;
+  column-gap: 5px;
+  margin-bottom: 1rem;
+}
+
+.social a {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  background-color: var(--color-mygrey-10);
+}
+
+.social img {
+  width: 22px;
+  height: 22px;
+}
+
+.social a:hover {
+  background-color: var(--color-mygrey-0);
+}
+
+/************************** FOOTER **************************/
+footer {
+  background-color: var(--color-mygrey-70);
+  color: var(--color-mygrey-5);
+  text-align: center;
+  padding: 1rem 0;
+}
+
+footer p {
+  margin: 0.25rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--color-mygrey-30);
+}

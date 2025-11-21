@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flags | World Data</title>
+    
+    <!-- STYLESHEETS -->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    
+    <!-- GOOGLE FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <!-- OPEN GRAPH DATA -->
+    <meta property="og:title" content="Flage | World Data">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://paulcheney.github.io/1720-flags/images/opengraph.jpg">
+    <meta property="og:logo" content="https://paulcheney.github.io/1720-flags/images/logo.svg" />
+    <meta property="og:url" content="https://paulcheney.github.io/1720-flags">
+    <meta property="og:description" content="see all the flags of the world using a REST API">
+    <meta property="og:site_name" content="World Data from a REST API">
+
+    <!-- FAV ICON LINKS -->
+    <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="Schedule" />
+    <link rel="manifest" href="site.webmanifest" />
+
+    <!-- SCRIPTS -->
+    <script src="scripts/getdates.js" defer></script>
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/view.js" defer></script>
+    <script src="scripts/flags.js" defer></script>
+
+</head>
+<body>
+    <header>
+        <img src="images/logo.svg" alt="Government People" width="1" height="1" loading="lazy">
+        <span>World Data</span>
+        <button id="hamburger" class="hamburger" aria-label="navigation links"></button>
+    </header>
+    <nav id="navbar">
+        <ul>
+            <li><a href="#">Full Name</a></li>
+            <li class="active"><a href="index.html">Flags</a></li>
+            <li><a href="#">Code</a></li>
+            <li><a href="#">Currency</a></li>
+        </ul>
+    </nav>
+    
+    <main>
+            <h1>Flags</h1>
+            <div class="viewbuttons">
+                <button id="grid" class=""><img src="images/grid.svg" alt="grid view"></button>
+                <button id="list" class="active"><img src="images/list.svg" alt="list view"></button>
+            </div>
+
+        <div id="showHere" class="list"></div>
+       
+
+
+
+
+
+
+    </main>
+    <footer>
+        <section class="social">
+            
+            <a href="https://github.com/paulcheney" target="_blank"><img src="images/icon-github.svg" alt="GitHub Icon"></a>
+            <a href="https://www.linkedin.com/in/pcheney" target="_blank"><img src="images/icon-linkedin.svg" alt="Linked In Icon"></a>
+            <a href="https://www.youtube.com/@PaulCheney66" target="_blank"><img src="images/icon-youtube.svg" alt="Youtube Icon"></a>
+            <a href="https://www.facebook.com/paul.cheney.1422" target="_blank"><img src="images/icon-facebook.svg" alt="Facebook Icon"></a>
+        </section>
+        <p>&copy; <span id="currentyear"></span> • Paul Cheney • DWDD1720</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>
