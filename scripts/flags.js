@@ -1,5 +1,5 @@
 //Grab a location to display the data
-const showFlags = document.querySelector('#showHere')
+const showFlags = document.querySelector("#showHere");
 
 //function to grab the data from a remote site
 async function getData() {
@@ -11,44 +11,41 @@ async function getData() {
     }
 
     const result = await response.json();
-    console.log(result);
-    displayFlags(result)
+    //console.log(result);
+    displayFlags(result);
   } catch (error) {
     console.error(error.message);
+    showFlags.innerText = error.message;
   }
 }
 
 //call the function
-getData()
+getData();
 
 //Loop to display the data
 function displayFlags(allData) {
-  allData.forEach(item => {
-    console.log(item);
+  for (const item of allData) {
+    //console.log(item);
     //build a card
-    let countryCard = document.createElement("section")
+    let countryCard = document.createElement("section");
 
     //build the image
-    let countryFlag = document.createElement("img")
-    countryFlag.src= item.flags.svg
-    countryFlag.alt=item.name.common
+    let countryFlag = document.createElement("img");
+    countryFlag.src = item.flags.svg;
+    countryFlag.alt = item.name.common;
 
     //build the heading
-    let countryName = document.createElement("h2") 
-    countryName.innerText = item.name.common
+    let countryName = document.createElement("h2");
+    countryName.innerText = item.name.common;
 
     //build the language
-    let countryLang = document.createElement("p")
-    countryLang.innerText = Object.values(item.languages).join(", "); 
+    let countryLang = document.createElement("p");
+    countryLang.innerText = Object.values(item.languages).join(", ");
 
-    countryCard.appendChild(countryFlag)
-    countryCard.appendChild(countryName)
-    countryCard.appendChild(countryLang)
+    countryCard.appendChild(countryFlag);
+    countryCard.appendChild(countryName);
+    countryCard.appendChild(countryLang);
 
-    showFlags.appendChild(countryCard)
-  });
-
-
-
-
+    showFlags.appendChild(countryCard);
+  }
 }
