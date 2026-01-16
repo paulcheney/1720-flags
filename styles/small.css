@@ -2,26 +2,34 @@
 :root {
   --color-primary: #3a4ca7;
   --color-secondary: #e7a931;
-
   /* Add a grey scale Colors */
-  --color-mygrey-0: lab(100% 0 0);
-  --color-mygrey-5: lab(95% 0 0);
-  --color-mygrey-10: lab(90% 0 0);
-  --color-mygrey-20: lab(80% 0 0);
-  --color-mygrey-30: lab(70% 0 0);
-  --color-mygrey-40: lab(60% 0 0);
-  --color-mygrey-50: lab(50% 0 0);
-  --color-mygrey-60: lab(40% 0 0);
-  --color-mygrey-70: lab(30% 0 0);
-  --color-mygrey-80: lab(20% 0 0);
-  --color-mygrey-90: lab(10% 0 0);
-  --color-mygrey-100: lab(0% 0 0);
+  --color-mygrey-05: lab(98% 0 0);
+  --color-mygrey-10: lab(97% 0 0);
+  --color-mygrey-20: lab(91% 0 0);
+  --color-mygrey-30: lab(85% 0 0);
+  --color-mygrey-40: lab(66% 0 0);
+  --color-mygrey-50: lab(48% 0 0);
+  --color-mygrey-60: lab(34% 0 0);
+  --color-mygrey-70: lab(27% 0 0);
+  --color-mygrey-80: lab(15% 0 0);
+  --color-mygrey-90: lab(8% 0 0);
+  --color-mygrey-95: lab(3% 0 0);
 }
 
+/************************** BORDER BOX **************************/
 * {
-  font-family: "Montserrat", sans-serif;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
+
+/************************** BODY **************************/
+body {
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
 
 /************************** HEADER **************************/
 header {
@@ -71,7 +79,7 @@ nav {
 }
 
 nav ul {
-  background-color: var(--color-mygrey-5);
+  background-color: var(--color-mygrey-05);
   margin: 0;
   padding: 0;
   list-style: none;
@@ -225,7 +233,7 @@ gap: 10px
 /************************** FOOTER **************************/
 footer {
   background-color: var(--color-mygrey-70);
-  color: var(--color-mygrey-5);
+  color: var(--color-mygrey-05);
   text-align: center;
   padding: 1rem 0;
 }
