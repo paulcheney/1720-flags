@@ -37,12 +37,18 @@ header {
   }
 
 /************************** FLAG AREA AS A LIST **************************/
+.list section {
+  grid-template-columns: 100px 1fr 1fr;
+  grid-template-areas:
+  "flag name lang";
+}
 .list h2 {
   font-size: 1.5rem;
 }
 .list p {
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
+
 
 
 

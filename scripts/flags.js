@@ -1,51 +1,35 @@
-//Grab a location to display the data
-const showFlags = document.querySelector("#showHere");
+const showFlags = document.querySelector("#showFlags");
 
-//function to grab the data from a remote site
-async function getData() {
-  const url = "https://restcountries.com/v3.1/all?fields=name,flags,languages";
+//Build an asynchronous function to grab the data from an external site
+async function getData(url) {
   try {
     const response = await fetch(url);
-    if (!response.ok) {
-      throw new Error(`Response status: ${response.status}`);
-    }
-
-    const result = await response.json();
-    //console.log(result);
-    displayFlags(result);
+    console.log(response);
+    displayFlags(await response.json());
   } catch (error) {
-    console.error(error.message);
     showFlags.innerText = error.message;
   }
 }
 
-//call the function
-getData();
 
-//Loop to display the data
-function displayFlags(allData) {
-  for (const item of allData) {
-    //console.log(item);
-    //build a card
-    let countryCard = document.createElement("section");
 
-    //build the image
-    let countryFlag = document.createElement("img");
-    countryFlag.src = item.flags.svg;
-    countryFlag.alt = item.name.common;
+//Call the function above on page load
+getData("https://restcountries.com/v3.1/all?fields=name,flags,languages");
 
-    //build the heading
-    let countryName = document.createElement("h2");
-    countryName.innerText = item.name.common;
 
-    //build the language
-    let countryLang = document.createElement("p");
-    countryLang.innerText = Object.values(item.languages).join(", ");
 
-    countryCard.appendChild(countryFlag);
-    countryCard.appendChild(countryName);
-    countryCard.appendChild(countryLang);
 
-    showFlags.appendChild(countryCard);
-  }
+//Loop through all the Countries and display the flags on the page.
+function displayFlags(countries) {
+  console.log(countries);
+  countries.forEach(item => {
+    const card = document.createElement("section")
+
+    card.innerHTML = `
+      <h2>${item.name.common}</h2>
+      <img src="${item.flags.svg}" alt="${item.flags.alt}">
+      <p>${Object.values(item.languages).join(" & ")}</p>
+    `
+    showFlags.appendChild(card)
+  });
 }
