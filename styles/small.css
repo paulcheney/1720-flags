@@ -28,7 +28,6 @@ body {
   padding: 0;
 }
 
-
 /************************** HEADER **************************/
 header {
   padding: 10px 0 10px 10px;
@@ -48,9 +47,8 @@ header img {
 header span {
   font-size: 1.3rem;
   font-weight: 300;
-  color: var(--color-secondary)
+  color: var(--color-secondary);
 }
-
 
 /************************** HAMBURGER NAVIGATION **************************/
 .hamburger {
@@ -70,7 +68,6 @@ header span {
   content: "\00D7";
 }
 
-
 /************************** NAVIGATION **************************/
 nav {
   display: none;
@@ -85,7 +82,7 @@ nav ul {
 
 nav a {
   display: block;
-  font-size: .8rem;
+  font-size: 0.8rem;
   font-weight: 700;
   color: var(--color-mygrey-70);
   text-decoration: none;
@@ -105,10 +102,6 @@ nav.show {
   display: block;
 }
 
-
-
-
-
 /************************** MAIN AREA **************************/
 h1 {
   color: var(--color-primary);
@@ -120,31 +113,29 @@ h1 {
 
 /************************** LIST / GRID BUTTONS **************************/
 .btn-layouts {
-padding: .5rem 0;
-display: flex;
-justify-content: center;
-gap: 10px
-
-}
-.btn-layouts button {
-  width: 88px;
+  display: flex;
+  width: 100px;
   height: 44px;
-  margin: 0;
-  padding: 11px;
-  background:none;
   border: 1px solid var(--color-mygrey-20);
-  border-radius: 4px;
+  border-radius: 20px;
+  margin: 0 auto;
+  overflow: hidden;
 }
 .btn-layouts img {
   width: 22px;
   height: 22px;
 }
-.btn-layouts .active {
-  background-color: var(--color-secondary);
-
+.btn-layouts button {
+  width: 50px;
+  height: 44px;
+  margin: 0;
+  background: none;
+  border: none;
 }
 
-
+.btn-layouts .show {
+  background-color: var(--color-secondary);
+}
 
 /************************** FLAG AREA AS A LIST **************************/
 .list section {
@@ -152,8 +143,8 @@ gap: 10px
   grid-template-columns: 100px auto;
   gap: 10px;
   grid-template-areas:
-  "flag name"
-  "flag lang";
+    "flag name"
+    "flag lang";
   border: 1px solid var(--color-mygrey-10);
   overflow: hidden;
   margin: 1rem 10px;
@@ -176,7 +167,7 @@ gap: 10px
   grid-area: lang;
   margin: 0;
   align-self: center;
-  font-size: .8rem;
+  font-size: 0.8rem;
   font-weight: 200;
   color: var(--color-mygrey-50);
 }
@@ -184,7 +175,7 @@ gap: 10px
 /************************** FLAG AREA AS A GRID **************************/
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   margin: 10px;
   gap: 10px;
 }
@@ -204,18 +195,15 @@ gap: 10px
   font-weight: 700;
   text-align: center;
   background-color: var(--color-mygrey-05);
-  color: var(--color-primary)
+  color: var(--color-primary);
 }
 
 .grid p {
-  font-size: .9rem;
+  font-size: 0.9rem;
   font-weight: 400;
   text-align: center;
-  color: var(--color-mygrey-50)
+  color: var(--color-mygrey-50);
 }
-
-
-
 
 /************************** SOCIAL MEDIA **************************/
 .social {

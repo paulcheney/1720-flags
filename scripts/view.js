@@ -5,7 +5,7 @@ const layout = document.querySelector('#showFlags')
 
 //Assign Grid Class
 gridButton.addEventListener('click', () => {
-    gridButton.className = 'active';
+    gridButton.className = 'show';
     listButton.className = '';
     layout.className = 'grid';
 })
@@ -13,6 +13,6 @@ gridButton.addEventListener('click', () => {
 //Assign List Class
 listButton.addEventListener('click', () => {
     gridButton.className = '';
-    listButton.className = 'active';
+    listButton.className = 'show';
     layout.className = 'list';
 })
