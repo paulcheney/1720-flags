@@ -4,45 +4,19 @@
   <defs>
     <style>
       .st0 {
-        letter-spacing: .2em;
-      }
-
-      .st1 {
         fill: #8ed6ea;
       }
 
-      .st2 {
-        font-family: AcuminPro-Regular, 'Acumin Pro';
-        font-size: 16px;
-      }
-
-      .st3 {
+      .st1 {
         fill: #3c3f63;
       }
 
-      .st4 {
+      .st2 {
         fill: #fdeb01;
-      }
-
-      .st5 {
-        letter-spacing: 0em;
-      }
-
-      .st6 {
-        letter-spacing: 0em;
-      }
-
-      .st7 {
-        letter-spacing: 0em;
-      }
-
-      .st8 {
-        letter-spacing: 0em;
       }
     </style>
   </defs>
-  <rect class="st1" width="150" height="100"/>
-  <circle class="st4" cx="75" cy="34.8" r="24.4"/>
-  <polygon class="st3" points="0 76.3 0 48.1 12.7 59.2 36.1 43.2 39.5 48.4 56.2 37.3 90.3 63.8 97.9 57.9 128.1 70.7 144.5 48.5 150 61.5 150 100 0 100 0 76.3"/>
-  <text class="st2" transform="translate(24.4 90.6)"><tspan class="st6" x="0" y="0">Mi</tspan><tspan class="st8" x="17.5" y="0">s</tspan><tspan x="25.2" y="0">sing </tspan><tspan class="st7" x="58.7" y="0">F</tspan><tspan class="st5" x="67.6" y="0">l</tspan><tspan x="71.3" y="0">ag </tspan><tspan class="st0" x="92.9" y="0">	</tspan></text>
+  <rect class="st0" width="150" height="100"/>
+  <circle class="st2" cx="75" cy="34.8" r="24.4"/>
+  <polygon class="st1" points="0 76.3 0 48.1 12.7 59.2 36.1 43.2 39.5 48.4 56.2 37.3 90.3 63.8 97.9 57.9 128.1 70.7 144.5 48.5 150 61.5 150 100 0 100 0 76.3"/>
 </svg>
