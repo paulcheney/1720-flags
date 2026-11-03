@@ -1,20 +1,22 @@
 const showFlags = document.querySelector("#showFlags");
 
 //Build an asynchronous function to grab the data from an external site
-async function getData(url) {
+async function getData(key) {
   try {
-    const response = await fetch(url);
+    const response = await fetch(
+      `https://api.restcountries.com/countries/v5?response_fields=names.common,languages,flag.url_svg&limit=100`,
+      { headers: { Authorization: `Bearer ${key}` } }
+    );
     console.log(response);
-    displayFlags(await response.json());
+    const payload = await response.json();
+    displayFlags(payload.data.objects);
   } catch (error) {
     showFlags.innerText = error.message;
   }
 }
 
-
-
 //Call the function above on page load
-getData("https://restcountries.com/v3.1/all?fields=name,flags,languages");
+getData("rc_live_381a7a03888845b08177c155467615c8");
 
 
 
@@ -24,11 +26,19 @@ function displayFlags(countries) {
   console.log(countries);
   countries.forEach(item => {
     const card = document.createElement("section")
+    // check to see if the flag image is valid.
+    //console.log(item.flag.url_svg)
+    let flagpath = item.flag?.url_svg;
+    if (!flagpath) {
+      flagpath = "../images/placeholder.svg";
+    }
+
+
 
     card.innerHTML = `
-      <h2>${item.name.common}</h2>
-      <img src="${item.flags.svg}" alt="${item.flags.alt}">
-      <p>${Object.values(item.languages).join(" & ")}</p>
+      <h2>${item.names.common}</h2>
+      <img src="${flagpath}" alt="${item.flag.description}">
+      <p>${item.languages.map((language) => language.name).join(" & ")}</p>
     `
     showFlags.appendChild(card)
   });
