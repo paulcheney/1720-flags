@@ -1,11 +1,11 @@
 const showFlags = document.querySelector("#showFlags");
 
 //Build an asynchronous function to grab the data from an external site
-async function getData(key) {
+async function getData() {
   try {
     const response = await fetch(
       `https://api.restcountries.com/countries/v5?response_fields=names.common,languages,flag.url_svg&limit=100`,
-      { headers: { Authorization: `Bearer ${key}` } }
+      { headers: { Authorization: `Bearer rc_live_381a7a03888845b08177c155467615c8` } }
     );
     console.log(response);
     const payload = await response.json();
@@ -16,9 +16,7 @@ async function getData(key) {
 }
 
 //Call the function above on page load
-getData("rc_live_381a7a03888845b08177c155467615c8");
-
-
+getData();
 
 
 //Loop through all the Countries and display the flags on the page.

@@ -3,36 +3,46 @@
   <!-- Generator: Adobe Illustrator 30.8.2, SVG Export Plug-In . SVG Version: 2.1.4 Build 7)  -->
   <defs>
     <style>
-      .st0, .st1 {
-        fill: #231f20;
-      }
-
-      .st2 {
-        fill: #b7b7b7;
+      .st0 {
+        letter-spacing: .2em;
       }
 
       .st1 {
+        fill: #8ed6ea;
+      }
+
+      .st2 {
         font-family: AcuminPro-Regular, 'Acumin Pro';
-        font-size: 12px;
+        font-size: 16px;
       }
 
       .st3 {
-        fill: #fff;
+        fill: #3c3f63;
       }
 
       .st4 {
-        letter-spacing: 0em;
+        fill: #fdeb01;
       }
 
       .st5 {
         letter-spacing: 0em;
       }
+
+      .st6 {
+        letter-spacing: 0em;
+      }
+
+      .st7 {
+        letter-spacing: 0em;
+      }
+
+      .st8 {
+        letter-spacing: 0em;
+      }
     </style>
   </defs>
-  <g>
-    <rect class="st2" x=".5" y=".5" width="149" height="99"/>
-    <path class="st0" d="M149,1v98H1V1h148ZM150,0H0v100h150V0h0Z"/>
-  </g>
-  <circle class="st3" cx="75" cy="50" r="36.1"/>
-  <text class="st1" transform="translate(54.5 96.1)"><tspan class="st4" x="0" y="0">Mi</tspan><tspan class="st5" x="13.1" y="0">s</tspan><tspan x="18.9" y="0">sing</tspan></text>
+  <rect class="st1" width="150" height="100"/>
+  <circle class="st4" cx="75" cy="34.8" r="24.4"/>
+  <polygon class="st3" points="0 76.3 0 48.1 12.7 59.2 36.1 43.2 39.5 48.4 56.2 37.3 90.3 63.8 97.9 57.9 128.1 70.7 144.5 48.5 150 61.5 150 100 0 100 0 76.3"/>
+  <text class="st2" transform="translate(24.4 90.6)"><tspan class="st6" x="0" y="0">Mi</tspan><tspan class="st8" x="17.5" y="0">s</tspan><tspan x="25.2" y="0">sing </tspan><tspan class="st7" x="58.7" y="0">F</tspan><tspan class="st5" x="67.6" y="0">l</tspan><tspan x="71.3" y="0">ag </tspan><tspan class="st0" x="92.9" y="0">	</tspan></text>
 </svg>
